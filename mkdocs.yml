@@ -1,0 +1,40 @@
+site_name: sorc wiki
+
+theme:
+  name: material
+  palette:
+    - scheme: slate
+      primary: blue
+      accent: blue
+      toggle:
+          icon: material/toggle-switch
+          name: disable dark mode
+    - scheme: default
+      toggle:
+          icon: material/toggle-switch-off-outline
+          name: enable dark mode
+    
+  features:
+    - navigation.top
+    - content.code.annotate
+
+plugins:
+  - search
+  - git-revision-date-localized
+
+markdown_extensions:
+  - admonition
+  - codehilite
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.highlight:
+      auto_title: true
+      pygments_lang_class: true
+      anchor_linenums: true
+
+extra_javascript:
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js
+  - javascripts/config.js
+extra_css:
+    - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/default.min.css
